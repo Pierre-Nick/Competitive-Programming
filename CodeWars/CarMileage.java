@@ -14,12 +14,12 @@
 
  * Any digit followed by all zeros: 100, 90000
  * Every digit is the same number: 1111
- * The digits are sequential, incrementing†: 1234
- * The digits are sequential, decrementing‡: 4321
+ * The digits are sequential, incrementingâ€ : 1234
+ * The digits are sequential, decrementingâ€¡: 4321
  * The digits are a palindrome: 1221 or 73837
  * The digits match one of the values in the awesomePhrases array
- * † For incrementing sequences, 0 should come after 9, and not before 1, as in 7890.
- * ‡ For decrementing sequences, 0 should come after 1, and not before 9, as in 3210.
+ * â€  For incrementing sequences, 0 should come after 9, and not before 1, as in 7890.
+ * â€¡ For decrementing sequences, 0 should come after 1, and not before 9, as in 3210.
  * So, you should expect these inputs and outputs:
  * 
  * @author Nick Pierre
@@ -31,14 +31,14 @@ public class CarMileage {
         
         /** Check conditions on a number less than 100 but greater than 97 */          
         if (number < 100) {
-            if (number + 1 > 99) {
+            if (number + 1 > 97) {
                 if (isPalindrome(String.valueOf(number + 2)) || isPalindrome(String.valueOf(number + 1))) { return 1;}
                 else if (digitToZeros(number + 1) || digitToZeros(number + 2)) return 1;
                 else if (checkSame(number + 1) || checkSame(number + 2)) return 1;
                 else if (checkSeq(String.valueOf(number + 1)) || checkSeq(String.valueOf(number + 2))) { return 1; }
                 else if (awesomeCheck(number + 1, awesomePhrases) || awesomeCheck(number + 2, awesomePhrases)) { return 1; }
             }
-            else if (number + 2 > 99) {
+            else if (number + 2 > 97) {
                 if (isPalindrome(String.valueOf(number + 2))) { return 1;}
                 else if (digitToZeros(number + 2)) { return 1; }
                 else if (checkSame(number + 2)) { return 1;}
