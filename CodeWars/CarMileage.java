@@ -26,11 +26,10 @@
  *
  * @author Nick Pierre
  */
-
 public class CarMileage {
 
     public static int isInteresting(int number, int[] awesomePhrases) {
-        
+
         /** Check conditions on a number less than 100 but greater than 97 */
         if (number + 2 < 100)
             return 0;
@@ -63,7 +62,6 @@ public class CarMileage {
         int numberCount = Integer.parseInt(String.valueOf(number.charAt(0)));
 
         // Increasing Check
-        System.out.println("Increase check for: " + number);
         for (int i = 1; i < number.length(); i++) {
             int currentNumber = Integer.parseInt(String.valueOf(number.charAt(i)));
             if (currentNumber != numberCount + 1) {
@@ -87,7 +85,6 @@ public class CarMileage {
             if (numberCount < 0)
                 numberCount = 0;
         }
-        System.out.println(number + " is Increasing Or Decreasing Sequence: " + (isDecreasingSequence || isIncreasingSequence));
         return (isDecreasingSequence || isIncreasingSequence);
     }
 
@@ -95,11 +92,9 @@ public class CarMileage {
         boolean numberIsAnAwesomePhrase = true;
         for (int awesomePhrase : awesomePhrases) {
             if (number == awesomePhrase) {
-                System.out.println(number + " is an awesome Phrase: " + numberIsAnAwesomePhrase);
                 return numberIsAnAwesomePhrase;
             }
         }
-        System.out.println(number + " is an awesome Phrase: " + !numberIsAnAwesomePhrase);
         return !numberIsAnAwesomePhrase;
     }
 
@@ -109,11 +104,9 @@ public class CarMileage {
 
         for (int i = 1; i < numberString.length(); i++) {
             if (numberString.charAt(i) != numberString.charAt(0)) {
-                System.out.println(number + "'s digits are all the same: " + !allDigitsAreTheSame);
                 return !allDigitsAreTheSame;
             }
         }
-        System.out.println(number + "'s digits are all the same: " + allDigitsAreTheSame);
         return allDigitsAreTheSame;
     }
     private static boolean digitToZeros(int number) {
@@ -122,23 +115,19 @@ public class CarMileage {
 
         for (int i = 1; i < numberString.length(); i++) {
             if (numberString.charAt(i) != '0') {
-                System.out.println(number + "'s digits are all zeroes after first digit: " + !allZerosAfterDigit);
                 allZerosAfterDigit = false;
                 break;
             }
         }
-        System.out.println(number + "'s digits are all zeroes after first digit: " + allZerosAfterDigit);
         return allZerosAfterDigit;
     }
 
     private static boolean isPalindrome(String number) {
         for (int i = 0; i < number.length() / 2; i++) {
             if (number.charAt(i) != number.charAt(number.length() - i - 1)) {
-                System.out.println(number + " is not a palindrome: ");
                 return false;
             }
         }
-        System.out.println(number + " is a palindrome: ");
         return true;
     }
 }
