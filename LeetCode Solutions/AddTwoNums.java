@@ -13,6 +13,8 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * 1559 / 1559 test cases passed.
+ * 65 ms Runtime
  */
 public class Solution {
   
