@@ -3,7 +3,9 @@ package algorithms;
 /**
  * Given two strings, write a method to decide if one is a permutation of another
  * @author Nick Pierre
- *
+ * 
+ * Note: This particular solution assumes lower case alphabetic ASCII characters and spaces
+ * considered only! 
  */
 
 import java.util.*;
@@ -32,7 +34,7 @@ public class CheckPermutations {
 		
 		if (s1.length() != s2.length()) return false;
 		
-		int[] occurencesOfLetters = new int[126];
+		int[] occurencesOfLetters = new int[26];
 		
 		for (int i = 0; i < s1.length(); i++) {
 			occurencesOfLetters[s1.charAt(i) - 97]++;
