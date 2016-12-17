@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 /**
+ *
+ * Given two arrays/Lists with sorted and non intersecting intervals. Merge them to get a new sorted
+ * non-intersecting array/list.
  * Created by NickPierre on 12/16/16.
  */
 public class IntervalTest {
