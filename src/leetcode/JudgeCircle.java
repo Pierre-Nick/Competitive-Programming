@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.InputMismatchException;
 
 /**
@@ -7,13 +9,14 @@ import java.util.InputMismatchException;
  * The valid robot moves are R (Right), L (Left), U (Up) and D (down).
  * The output should be true or false representing whether the robot makes a circle.
  */
+
 public class JudgeCircle {
     public static void main(String[] args) {
         System.out.println(judgeCircle("RLUURDDDLU"));
         System.out.println(judgeCircle("ULDLDRDRURUL"));
     }
 
-    private static  boolean judgeCircle(String moves) {
+    private static boolean judgeCircle(String moves) {
         int movementCount = 0;
         for (int i = 0; i < moves.length(); i++) {
             movementCount += correspondingValue(moves.charAt(i));
@@ -24,11 +27,16 @@ public class JudgeCircle {
 
     private static int correspondingValue(char a) {
         switch (a) {
-            case 'U' : return 1;
-            case 'D' : return -1;
-            case 'R' : return 1;
-            case 'L' : return -1;
-            default: throw new InputMismatchException("The movement " + a + " is not supported");
+            case 'U':
+                return 1;
+            case 'D':
+                return -1;
+            case 'R':
+                return 1;
+            case 'L':
+                return -1;
+            default:
+                throw new InputMismatchException("The movement " + a + " is not supported");
         }
     }
 }

@@ -3,4 +3,6 @@ All *solutions are from various competitive programming sites such as Leetcode, 
 
 Some *solutions are from Cracking the Coding Interview by Gale McDowell.
 
-*Solutions were solved solely by me. Any similiraties to an unknown source is probably just coincidence and will hurt my feelings if you assume I'd copy someones solution. :(
+*All solutions were created by yours truly, however, feel free to use them for creative inspiration.
+Solutions are added randomly, so coding style may change randomly; I don't want to tamper with my 
+initial solutions as they provide insight for my own personal development. Thanks and enjoy!

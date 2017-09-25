@@ -1,18 +1,19 @@
+package crackingTheCodingInterview.interval;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
 /**
- *
  * Given two arrays/Lists with sorted and non intersecting intervals. Merge them to get a new sorted
  * non-intersecting array/list.
- * Created by NickPierre on 12/16/16.
  */
+
 public class IntervalTest {
     public static void main(String[] args) {
-        int[][] arr1 = { {1, 9}, {17, 25}, {58, 73}, {75, 96} };
-        int[][] arr2 =  { {8, 11}, {16, 47}, {94, 95}, {103, 104} };
+        int[][] arr1 = {{1, 9}, {17, 25}, {58, 73}, {75, 96}};
+        int[][] arr2 = {{8, 11}, {16, 47}, {94, 95}, {103, 104}};
 
-        ArrayList<Interval>  list = new ArrayList<>();
+        ArrayList<Interval> list = new ArrayList<>();
         ArrayList<Interval> intervals = new ArrayList<>();
         Stack<Interval> stack = new Stack<>();
 
@@ -25,8 +26,7 @@ public class IntervalTest {
                 if (arr1[i][0] < arr2[j][0]) {
                     intervals.add(new Interval(arr1[i][0], arr1[i][1]));
                     i++;
-                }
-                else {
+                } else {
                     intervals.add(new Interval(arr2[j][0], arr2[j][1]));
                     j++;
                 }
@@ -43,15 +43,15 @@ public class IntervalTest {
             }
         }
 
-        for (i = intervals.size() -  1; i >= 0; i--) {
+        for (i = intervals.size() - 1; i >= 0; i--) {
             stack.push(intervals.remove(i));
         }
 
-        while(!stack.isEmpty()) { // O(i + j) i.e O(n)
+        while (!stack.isEmpty()) { // O(i + j) i.e O(n)
             Interval currentInterval = stack.pop();
             boolean solvedInterval = false;
 
-            while(!solvedInterval && !stack.isEmpty()) { // O(n)
+            while (!solvedInterval && !stack.isEmpty()) { // O(n)
                 Interval temp = stack.peek();
 
                 if (temp.getStart() <= currentInterval.getEnd()) {

@@ -20,7 +20,6 @@
 # Completing an activity ranked higher than the current user's rank will accelerate the rank progression. The greater the difference 
 # between rankings the more the progression will be increased. The formula is 10 * d * d where d equals the difference in ranking between the activity and the user.
 #
-# @author Nick Pierre
 
 class User(object):
     def __init__(self):

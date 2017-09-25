@@ -1,3 +1,5 @@
+package codewars;
+
 /**
  * Difficulty: 4 Kyu
  *
@@ -24,13 +26,12 @@
  * ‡ For decrementing sequences, 0 should come after 1, and not before 9, as in 3210.
  * So, you should expect these inputs and outputs:
  *
- * @author Nick Pierre
  */
 public class CarMileage {
 
     public static int isInteresting(int number, int[] awesomePhrases) {
 
-        /** Check conditions on a number less than 100 but greater than 97 */
+        /* Check conditions on a number less than 100 but greater than 97 */
         if (number + 2 < 100)
             return 0;
 
@@ -38,7 +39,7 @@ public class CarMileage {
         String numberAsAString1 = String.valueOf(number + 1);
         String numberAsAString2 = String.valueOf(number + 2);
 
-        /** Check if interesting number occurs within next 2 miles */
+        /* Check if interesting number occurs within next 2 miles */
         if ((isPalindrome(numberAsAString) || digitToZeros(number) || checkIfAllDigitsAreTheSame(number) ||
             checkIfIncreasingOrDecreasingSequence(numberAsAString) || awesomeCheck(number, awesomePhrases)) && number > 99) {
             return 2;
@@ -89,25 +90,24 @@ public class CarMileage {
     }
 
     private static boolean awesomeCheck(int number, int[] awesomePhrases) {
-        boolean numberIsAnAwesomePhrase = true;
         for (int awesomePhrase : awesomePhrases) {
             if (number == awesomePhrase) {
-                return numberIsAnAwesomePhrase;
+                return true;
             }
         }
-        return !numberIsAnAwesomePhrase;
+
+        return false;
     }
 
     private static boolean checkIfAllDigitsAreTheSame(int number) {
-        boolean allDigitsAreTheSame = true;
         String numberString = String.valueOf(number);
 
         for (int i = 1; i < numberString.length(); i++) {
             if (numberString.charAt(i) != numberString.charAt(0)) {
-                return !allDigitsAreTheSame;
+                return false;
             }
         }
-        return allDigitsAreTheSame;
+        return true;
     }
     private static boolean digitToZeros(int number) {
         boolean allZerosAfterDigit = true;

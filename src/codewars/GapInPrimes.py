@@ -18,7 +18,7 @@
 # So this function should return the first pair of two prime numbers spaced with a gap of g between the limits m, n 
 # if these numbers exist otherwise nil or null or None or Nothing (depending on the language). In C++ return in such a case {0, 0}.
 #
-# @author Nick Pierre
+
 import time
 
 def gap(g, m, n):

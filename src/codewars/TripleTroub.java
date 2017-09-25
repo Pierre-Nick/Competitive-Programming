@@ -1,14 +1,16 @@
-/** Difficulty: 6 Kyu
- * 
- * Takes in numbers num1 and num2 and returns 1 if there is a straight triple of a number at any place in num1 and also a straight double of the same number in num2.
+package codewars;
+
+/**
+ * Difficulty: 6 Kyu
+ * <p>
+ * Takes in numbers num1 and num2 and returns 1 if there is a
+ * straight triple of a number at any place in num1 and also a
+ * straight double of the same number in num2.
  * returns 0 if this is not the case
- * @author Nick Pierre
- *
  */
-public class TripleTroub
-{
-    public static int TripleDouble(long num1, long num2)
-    {
+
+public class TripleTroub {
+    public static int TripleDouble(long num1, long num2) {
         for (int i = 0; i < 10; i++) {
             String triple = String.valueOf(i) + String.valueOf(i) + String.valueOf(i);
             System.out.println(triple);
