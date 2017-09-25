@@ -1,7 +1,10 @@
+package leetcode;
+
 /**
  * The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
  * Given two integers x and y, calculate the Hamming distance.
  */
+
 public class HammingDistance {
 
     /* This same code can be done in one line:  Integer.bitCount(x ^ y)  */
@@ -38,8 +41,9 @@ public class HammingDistance {
     }
 
     /**
-     *  Adds leading zeroes to an expected binary value
-     * @param binaryVal a binary number of type String
+     * Adds leading zeroes to an expected binary value
+     *
+     * @param binaryVal     a binary number of type String
      * @param leadingZeroes the amount of leading 0's to add to the first parameter of type String
      */
     private static String addLeadingZeroes(String binaryVal, int leadingZeroes) {

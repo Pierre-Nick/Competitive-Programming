@@ -1,20 +1,19 @@
-/**
- * Created by NickPierre on 12/16/16.
- */
+package crackingTheCodingInterview.interval;
+
 public class Interval {
     private int start;
     private int end;
 
-    public Interval(int start, int end) {
+    Interval(int start, int end) {
         this.start = start;
         this.end = end;
     }
 
-    public int getStart() {
+    int getStart() {
         return start;
     }
 
-    public int getEnd() {
+    int getEnd() {
         return end;
     }
 
@@ -22,7 +21,7 @@ public class Interval {
         start = newStart;
     }
 
-    public void setEnd(int newEnd) {
+    void setEnd(int newEnd) {
         end = newEnd;
     }
 
@@ -30,5 +29,4 @@ public class Interval {
     public String toString() {
         return "{ " + this.getStart() + ", " + this.getEnd() + " } ";
     }
-
 }
