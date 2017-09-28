@@ -16,12 +16,13 @@ class RotateMatrixTest {
                 {10, 11, 12}
         };
 
-        assertArrayEquals(rotate90(matrix),
-                new int[][]{
-                        {10, 7, 4, 1},
-                        {11, 8, 5, 2},
-                        {12, 9, 6, 3}
-                });
+        assertArrayEquals(new int[][]{
+                {10, 7, 4, 1},
+                {11, 8, 5, 2},
+                {12, 9, 6, 3}
+        }, rotate90(matrix));
+
+
     }
 
     @Test
@@ -32,12 +33,11 @@ class RotateMatrixTest {
                 {16, 17, 18},
         };
 
-        assertArrayEquals(rotate90(matrix),
-                new int[][]{
-                        {16, 13, 10},
-                        {17, 14, 11},
-                        {18, 15, 12}
-                });
+        assertArrayEquals(new int[][]{
+                {16, 13, 10},
+                {17, 14, 11},
+                {18, 15, 12}
+        }, rotate90(matrix));
     }
 
     @Test
@@ -47,10 +47,9 @@ class RotateMatrixTest {
                 {13, 14}
         };
 
-        assertArrayEquals(rotate90(matrix),
-                new int[][]{
-                        {13, 10},
-                        {14, 11}
-                });
+        assertArrayEquals(new int[][]{
+                {13, 10},
+                {14, 11}
+        }, rotate90(matrix));
     }
 }
